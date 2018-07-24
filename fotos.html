@@ -1,57 +1,83 @@
-<!DOCTYPE HTML>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ADMS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Galeria</title>
     <meta name="description" content="Empresa de consultoria">
     <meta name="keywords" content="Consultoria Jr">
     <meta name="robots" content="Index, foolow">
-    <meta name="author" content="João Victor">
+    <meta name="author" content="ADMS">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="fotos.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="_imagens/adms_logo03.jpg">
-    <style>
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif');
-</style>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="fotos.css">
 </head>
 <body>
- <header class="cabecalho">
+    
+
+
+    <div class="wrap">
+         <!--CABEÇALHO-->
+    <header class="cabecalho">
         <a href="Index.html"><h1 class="logo">ADMS Consultoria</h1></a>
         <button class="btn-menu"><i class="fa fa-bars fa-lg"></i></button>
         <nav class="menu">
-            <a class="btn-close">x</a>
+            <a class="btn-close"><i class="fa fa-times"></i></a>
             <ul>
-                <li><a href="#">Paginal inicial</a></li>
+                <li><a href="Index.html">Paginal inicial</a></li>
                 <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Galeria</a></li>
+                <li><a href="fotos.html">Galeria</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
     </header>
-    
-   <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
-     <script>
-          $(".btn-menu").click(function() {
-           $(".menu").show();
-          });
-          $(".btn-close").click(function() {
-           $(".menu").hide();
-          });
-    </script>
+        <!--fim Cabeçalho-->
+        
+        <section class="container gallery-container">
 
-    <h1 id="foto">Galeria de Fotos da ADMS</h1>
-    <ul id="album-fotos">
-        <li id="foto01"><span>foto com o presidente e diretores da ADMS</span></li>
-        <li id="foto02"><span>Todos os membros da ADMS</span></li>
-        <li id="foto03"><span>Capacitação com Rubens Pinon</span></li>
-        <li id="foto04"><span>Capacitação com o professor</span><span>Cassio Cipriano</span></li>
-        <li id="foto05"><span>imagen05</span></li>
-        <li id="foto06"><span>imagen06</span></li>
-    </ul>
-     <!--RODAPÈ-->
+            <!--Slide-->
+            <div class="mySlides fade"> <!-- 01 -->
+                <div class="numbertext">01 / 05</div>
+                <img class="imgslide" src="_imagens/bg03.jpg" alt="Arara Azul"/>
+                <div class="text">Primeira foto</div>
+            </div>
+
+            <div class="mySlides fade"> <!-- 02 -->
+                <div class="numbertext">02 / 05</div>
+                <img class="imgslide" src="_imagens/imagem04.jpg" alt="Arara Canindé"/>
+                <div class="text">Capacitação com Cacio cipriano</div>
+            </div>
+
+            <div class="mySlides fade"> <!-- 03 -->
+                <div class="numbertext">03 / 05</div>
+                <img class="imgslide" src="_imagens/diretores.jfif" alt="Diretores"/>
+                <div class="text">Diretores</div>
+            </div>
+
+            <div class="mySlides fade"> <!-- 04 -->
+                <div class="numbertext">04 / 05</div>
+                <img class="imgslide" src="_imagens/imagem03.jpg" alt="capacitação"/>
+                <div class="text">capacitaçã com Rubens pinon</div>
+            </div>
+            <div class="mySlides fade"> <!-- 05 -->
+                <div class="numbertext">05 / 05</div>
+                <img class="imgslide" src="_imagens/imagem05.jpg" alt="capacitação"/>
+                <div class="text">capacitaçã com Rubens pinon</div>
+            </div>
+            <!--Final Slides-->
+
+            <!--Navigation-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </section>
+        <!--End of galery-->
+
+        <!-- end of page -->
+         <!--RODAPÈ-->
     <footer class="rodape">
         <div class="social-icons">
             <a href="#"><i class="fa fa-facebook-square"></i></a>
@@ -61,6 +87,11 @@
             Rua D 25, Qd 11, Lt 10 - Setor George Yunes - Araguaína - To
         </p>
     </footer>
+    </div>
+
+    <!-- JS Comportament -->
+    <script src="js/comportamento.js"></script>
+    
     <!--JQUERY-->
    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
 <script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
